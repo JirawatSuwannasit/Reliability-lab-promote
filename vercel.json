@@ -1,0 +1,5 @@
+{
+  "buildCommand": "cd reliability-lab-website/reliability-lab-website && npm install && npm run build",
+  "outputDirectory": "reliability-lab-website/reliability-lab-website/dist",
+  "installCommand": "echo skip"
+}
