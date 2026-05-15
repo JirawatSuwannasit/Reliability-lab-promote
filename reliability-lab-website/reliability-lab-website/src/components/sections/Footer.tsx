@@ -64,9 +64,12 @@ export function Footer() {
           <div>
             <h4 className="text-white font-semibold text-sm mb-4">Contact</h4>
             <ul className="flex flex-col gap-2 text-[#8B95A7] text-sm">
-              <li>[Add facility address]</li>
-              <li>[Add contact email]</li>
-              <li>[Add contact phone]</li>
+              <li className="leading-relaxed">
+                Panasonic Automotive Systems Asia Pacific Co., Ltd.<br />
+                101 Moo 2 Teparak Road, T.Bangsaothong<br />
+                A.Bangsaothong, Samutprakarn 10570, Thailand
+              </li>
+              <li className="mt-1">Tel. 02-723-3100 ext. 4216</li>
               <li className="text-[#5A6478] text-xs mt-1">Mon–Fri, 8:30 AM – 5:30 PM (TH)</li>
             </ul>
           </div>
