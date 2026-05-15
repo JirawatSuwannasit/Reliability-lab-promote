@@ -1,16 +1,18 @@
-import { Service } from '../types';
+import type { Service } from '../types';
 
 export const services: Service[] = [
   {
     id: 1,
     slug: 'temperature-chamber',
+    code: 'TC-01',
     title: 'Temperature Chamber',
     category: 'Environment',
+    categoryShort: 'ENV',
     accent: 'blue',
     icon: 'thermometer',
     specs: [
-      { label: 'Range A', value: '+200°C to -20°C' },
-      { label: 'Range B', value: '+300°C to -20°C' },
+      { label: 'Range A', value: '+200', unit: '°C', suffix: '→ -20 °C' },
+      { label: 'Range B', value: '+300', unit: '°C', suffix: '→ -20 °C' },
     ],
     description:
       'High and low temperature exposure testing to validate component performance across operating ranges.',
@@ -24,14 +26,16 @@ export const services: Service[] = [
   {
     id: 2,
     slug: 'temp-humidity-chamber',
+    code: 'TH-02',
     title: 'Temperature & Humidity Chamber',
     category: 'Environment',
+    categoryShort: 'ENV',
     accent: 'blue',
     icon: 'droplets',
     specs: [
-      { label: 'Temp Range A', value: '+150°C to -50°C' },
-      { label: 'Temp Range B', value: '+100°C to -20°C' },
-      { label: 'Humidity', value: '20–98% RH' },
+      { label: 'Temp A', value: '+150', unit: '°C', suffix: '→ -50 °C' },
+      { label: 'Temp B', value: '+100', unit: '°C', suffix: '→ -20 °C' },
+      { label: 'Humidity', value: '20', unit: '', suffix: '→ 98 %RH' },
     ],
     description:
       'Combined temperature and humidity stress to evaluate moisture ingress, corrosion, and insulation degradation.',
@@ -45,13 +49,15 @@ export const services: Service[] = [
   {
     id: 3,
     slug: 'thermal-shock-chamber',
+    code: 'TS-03',
     title: 'Thermal Shock Chamber',
     category: 'Environment',
+    categoryShort: 'ENV',
     accent: 'blue',
     icon: 'zap',
     specs: [
-      { label: 'Range', value: '+200°C to -70°C' },
-      { label: 'Mode', value: 'Rapid zone transition' },
+      { label: 'Range', value: '+200', unit: '°C', suffix: '→ -70 °C' },
+      { label: 'Highlight', value: '', unit: '', suffix: 'Rapid hot ⇌ cold transition' },
     ],
     description:
       'Rapid temperature cycling between extreme hot and cold zones to expose thermal fatigue and material expansion stress.',
@@ -65,12 +71,15 @@ export const services: Service[] = [
   {
     id: 4,
     slug: 'rapid-temp-change',
+    code: 'RT-04',
     title: 'Rapid Temperature Change',
     category: 'Environment',
+    categoryShort: 'ENV',
     accent: 'blue',
     icon: 'arrow-up-down',
     specs: [
-      { label: 'Range', value: '+180°C to -70°C' },
+      { label: 'Range', value: '+180', unit: '°C', suffix: '→ -70 °C' },
+      { label: 'Profile', value: '', unit: '', suffix: 'Programmable ramp rate' },
     ],
     description:
       'Controlled-rate temperature transitions for evaluating component response under dynamic thermal gradients.',
@@ -83,22 +92,45 @@ export const services: Service[] = [
   },
   {
     id: 5,
-    slug: 'vibration-tensile',
-    title: 'Vibration + Tensile/Compression',
+    slug: 'vibration-test',
+    code: 'VT-05',
+    title: 'Vibration Test',
     category: 'Mechanical Stress',
+    categoryShort: 'MECH',
     accent: 'amber',
     icon: 'activity',
     specs: [
-      { label: 'Vibration', value: '5 Hz – 3 kHz, 50 G' },
-      { label: 'Force', value: 'up to 20 kN' },
+      { label: 'Vibration', value: '5', unit: 'Hz', suffix: '→ 3 kHz' },
+      { label: 'Acceleration', value: '50', unit: 'G', suffix: '' },
     ],
     description:
-      'Mechanical stress testing covering vibration spectrum and static force loading to validate physical durability.',
+      'Full-spectrum vibration testing to validate mechanical integrity under automotive vibration profiles.',
     useCases: [
       'Automotive vibration profile compliance',
-      'Mounting & housing strength validation',
-      'Connector pull-out and crush resistance',
+      'Resonance frequency identification',
+      'Fatigue life under vibration loads',
     ],
-    photoAlt: 'Vibration and tensile testing machine',
+    photoAlt: 'Vibration test machine',
+  },
+  {
+    id: 6,
+    slug: 'tensile-compression',
+    code: 'VT-06',
+    title: 'Tensile / Compression',
+    category: 'Mechanical Stress',
+    categoryShort: 'MECH',
+    accent: 'amber',
+    icon: 'move-vertical',
+    specs: [
+      { label: 'Force (Tensile / Compression)', value: '20', unit: 'kN', suffix: '' },
+    ],
+    description:
+      'Static force loading to validate physical durability of connectors, housings, and mechanical joints.',
+    useCases: [
+      'Connector pull-out and crush resistance',
+      'Mounting & housing strength validation',
+      'Mechanical joint integrity testing',
+    ],
+    photoAlt: 'Tensile and compression testing machine',
   },
 ];
