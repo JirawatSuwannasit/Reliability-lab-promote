@@ -60,27 +60,28 @@ export function ServiceCard({ service, onClick }: ServiceCardProps) {
       </div>
 
       {/* Machine photo with corner brackets */}
-      <div className="relative mx-2 mb-0" style={{ aspectRatio: '4/3', background: '#0d1a2a' }}>
+      <div className="relative mx-2 mb-0 overflow-hidden" style={{ aspectRatio: '4/3', background: '#0d1a2a' }}>
+        <img
+          src={service.photo}
+          alt={service.photoAlt}
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+        />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/30" />
         {/* Corner brackets on photo */}
-        <svg className="absolute top-0 left-0 w-4 h-4" viewBox="0 0 16 16" fill="none">
+        <svg className="absolute top-0 left-0 w-4 h-4 z-10" viewBox="0 0 16 16" fill="none">
           <path d="M0 12 L0 0 L12 0" stroke={accent} strokeWidth="1.2" strokeLinecap="square"/>
         </svg>
-        <svg className="absolute top-0 right-0 w-4 h-4" viewBox="0 0 16 16" fill="none">
+        <svg className="absolute top-0 right-0 w-4 h-4 z-10" viewBox="0 0 16 16" fill="none">
           <path d="M16 12 L16 0 L4 0" stroke={accent} strokeWidth="1.2" strokeLinecap="square"/>
         </svg>
-        <svg className="absolute bottom-0 left-0 w-4 h-4" viewBox="0 0 16 16" fill="none">
+        <svg className="absolute bottom-0 left-0 w-4 h-4 z-10" viewBox="0 0 16 16" fill="none">
           <path d="M0 4 L0 16 L12 16" stroke={accent} strokeWidth="1.2" strokeLinecap="square"/>
         </svg>
-        <svg className="absolute bottom-0 right-0 w-4 h-4" viewBox="0 0 16 16" fill="none">
+        <svg className="absolute bottom-0 right-0 w-4 h-4 z-10" viewBox="0 0 16 16" fill="none">
           <path d="M16 4 L16 16 L4 16" stroke={accent} strokeWidth="1.2" strokeLinecap="square"/>
         </svg>
-        {/* Placeholder label */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-1">
-          <span className="text-[0.55rem] font-mono font-bold tracking-wider" style={{ color: `${accent}70` }}>
-            [ PHOTO ]
-          </span>
-          <span className="text-[0.5rem] font-mono text-[#3a4558]">1200 × 900</span>
-        </div>
       </div>
 
       {/* Card body */}

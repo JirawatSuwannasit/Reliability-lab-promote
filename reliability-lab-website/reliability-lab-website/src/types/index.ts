@@ -16,6 +16,7 @@ export interface Service {
   categoryShort: string;
   accent: AccentColor;
   icon: string;
+  photo: string;
   specs: ServiceSpec[];
   description: string;
   useCases: string[];

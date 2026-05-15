@@ -26,25 +26,27 @@ function ServiceDetailRow({ service, index }: { service: Service; index: number 
       className="relative w-full rounded-[6px] overflow-hidden"
       style={{ aspectRatio: '4/3', background: '#0d1a2a' }}
     >
-      {/* Corner brackets on photo */}
-      <svg className="absolute top-0 left-0 w-6 h-6" viewBox="0 0 24 24" fill="none">
+      <img
+        src={service.photo}
+        alt={service.photoAlt}
+        className="absolute inset-0 w-full h-full object-cover"
+        loading="lazy"
+      />
+      {/* Subtle dark overlay */}
+      <div className="absolute inset-0 bg-black/20" />
+      {/* Corner brackets */}
+      <svg className="absolute top-0 left-0 w-6 h-6 z-10" viewBox="0 0 24 24" fill="none">
         <path d="M0 18 L0 0 L18 0" stroke={accent} strokeWidth="1.5" strokeLinecap="square"/>
       </svg>
-      <svg className="absolute top-0 right-0 w-6 h-6" viewBox="0 0 24 24" fill="none">
+      <svg className="absolute top-0 right-0 w-6 h-6 z-10" viewBox="0 0 24 24" fill="none">
         <path d="M24 18 L24 0 L6 0" stroke={accent} strokeWidth="1.5" strokeLinecap="square"/>
       </svg>
-      <svg className="absolute bottom-0 left-0 w-6 h-6" viewBox="0 0 24 24" fill="none">
+      <svg className="absolute bottom-0 left-0 w-6 h-6 z-10" viewBox="0 0 24 24" fill="none">
         <path d="M0 6 L0 24 L18 24" stroke={accent} strokeWidth="1.5" strokeLinecap="square"/>
       </svg>
-      <svg className="absolute bottom-0 right-0 w-6 h-6" viewBox="0 0 24 24" fill="none">
+      <svg className="absolute bottom-0 right-0 w-6 h-6 z-10" viewBox="0 0 24 24" fill="none">
         <path d="M24 6 L24 24 L6 24" stroke={accent} strokeWidth="1.5" strokeLinecap="square"/>
       </svg>
-      <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
-        <span className="text-xs font-mono font-bold tracking-wider" style={{ color: `${accent}70` }}>
-          [ MACHINE IMAGE ]
-        </span>
-        <span className="text-[0.7rem] font-mono text-[#3a4558]">1200 × 900 px</span>
-      </div>
     </div>
   );
 

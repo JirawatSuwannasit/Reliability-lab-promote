@@ -10,6 +10,7 @@ export const services: Service[] = [
     categoryShort: 'ENV',
     accent: 'blue',
     icon: 'thermometer',
+    photo: '/machine-photos/photo-high-temp.png',
     specs: [
       { label: 'Range A', value: '+200', unit: '°C', suffix: '→ -20 °C' },
       { label: 'Range B', value: '+300', unit: '°C', suffix: '→ -20 °C' },
@@ -32,6 +33,7 @@ export const services: Service[] = [
     categoryShort: 'ENV',
     accent: 'blue',
     icon: 'droplets',
+    photo: '/machine-photos/photo-temp-humidity.png',
     specs: [
       { label: 'Temp A', value: '+150', unit: '°C', suffix: '→ -50 °C' },
       { label: 'Temp B', value: '+100', unit: '°C', suffix: '→ -20 °C' },
@@ -55,6 +57,7 @@ export const services: Service[] = [
     categoryShort: 'ENV',
     accent: 'blue',
     icon: 'zap',
+    photo: '/machine-photos/photo-thermal-shock.png',
     specs: [
       { label: 'Range', value: '+200', unit: '°C', suffix: '→ -70 °C' },
       { label: 'Highlight', value: '', unit: '', suffix: 'Rapid hot ⇌ cold transition' },
@@ -77,6 +80,7 @@ export const services: Service[] = [
     categoryShort: 'ENV',
     accent: 'blue',
     icon: 'arrow-up-down',
+    photo: '/machine-photos/photo-rapid-temp.png',
     specs: [
       { label: 'Range', value: '+180', unit: '°C', suffix: '→ -70 °C' },
       { label: 'Profile', value: '', unit: '', suffix: 'Programmable ramp rate' },
@@ -99,6 +103,7 @@ export const services: Service[] = [
     categoryShort: 'MECH',
     accent: 'amber',
     icon: 'activity',
+    photo: '/machine-photos/photo-vibration.png',
     specs: [
       { label: 'Vibration', value: '5', unit: 'Hz', suffix: '→ 3 kHz' },
       { label: 'Acceleration', value: '50', unit: 'G', suffix: '' },
@@ -121,6 +126,7 @@ export const services: Service[] = [
     categoryShort: 'MECH',
     accent: 'amber',
     icon: 'move-vertical',
+    photo: '/machine-photos/photo-tensile.png',
     specs: [
       { label: 'Force (Tensile / Compression)', value: '20', unit: 'kN', suffix: '' },
     ],
